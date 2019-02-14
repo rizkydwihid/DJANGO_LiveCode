@@ -1,0 +1,30 @@
+{% extends 'homepage/headfoot.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+{% for data in blog %}
+<div class="row">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="static/img/iphone.jpg" alt="">
+                <div class="card-body img-responsive">
+                    <span>Iphone X</span><br>
+                    <span>Rp 15.000.000</span><br>
+                    <a href="">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="container-fluid col-md-6">
+                <div class="row">
+                    <div class="col-md-12 center">
+                <div class="col-md-12">
+                    <h4>{{ data.judul }}</h4><br></div>
+                </div>
+                <div class="col-md-12"><h5>{{ data.isi }}
+                </h5>
+                <a href="{% url 'blog' %}">Lebih Singkat</a>
+                <br></div><br>
+                </div>
+        </div>
+        </div>
+        {% endfor %}
+        {% endblock %}
